@@ -4,9 +4,9 @@ const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 export async function fetchWeatherByCity(cityName) {
     try {
         const currentWeatherResponse = await fetch(
-            ${BASE_URL}/weather?q=${cityName}&appid=${API_KEY}&units=metric);
+            `${BASE_URL}/weather?q=${cityName}&appid=${API_KEY}&units=metric`);
         const forecastResponse = await fetch(
-            ${BASE_URL}/forecast?q=${cityName}&appid=${API_KEY}&units=metric
+            `${BASE_URL}/forecast?q=${cityName}&appid=${API_KEY}&units=metric`
         );
 
         if (!currentWeatherResponse.ok || !forecastResponse.ok) {
@@ -30,10 +30,10 @@ export async function fetchWeatherByCity(cityName) {
 export async function fetchWeatherByCoordinates(lat, lon) {
     try {
         const currentWeatherResponse = await fetch(
-            ${BASE_URL}/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric
+            `${BASE_URL}/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
         );
         const forecastResponse = await fetch(
-            ${BASE_URL}/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric
+            `${BASE_URL}/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
         );
 
         if (!currentWeatherResponse.ok || !forecastResponse.ok) {
@@ -54,7 +54,7 @@ export async function fetchWeatherByCoordinates(lat, lon) {
 }
 
 export function getWeatherIcon(iconCode) {
-    return http://openweathermap.org/img/wn/${iconCode}@2x.png;
+    return `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
 }
 
 
