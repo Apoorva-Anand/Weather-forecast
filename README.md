@@ -21,7 +21,7 @@ Repository: https://github.com/Apoorva-Anand/Weather-forecast
 ## Setup Instructions
 1. Clone the repository
 2. Obtain an API key from OpenWeatherMap
-3. Replace API_KEY in api.js
+3. Replace API_KEY in weather-app.js
 4. Run the application
    
 
@@ -30,11 +30,8 @@ Repository: https://github.com/Apoorva-Anand/Weather-forecast
 weather-forecast-app/
 │
 ├── index.html
-├── src/
-│   └── js/
-│       ├── api.js
-│       ├── ui.js
-│       └── app.js
+├── weather-app.js
+├── weatherIcon.png
 │
 └── README.md
 
@@ -45,3 +42,7 @@ weather-forecast-app/
 3. Commit your changes
 4. Push to the branch
 5. Create a new Pull Request
+
+
+## Updates
+Fixed permission error which was not allowing browser to open scripts, created new index.js file and combined all scripts in single file weather-app.js

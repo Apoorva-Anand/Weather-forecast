@@ -1,62 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast App</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 min-h-screen flex flex-col">
     <div class="container mx-auto px-4 py-8">
         <div class="max-w-xl mx-auto bg-white shadow-lg rounded-lg p-6">
-         
-         
-            <!-- search  section -->
-
-
+            <!-- search section -->
             <div class="mb-6 flex">
-                <input 
-                    type="text" 
-                    id="citySearch" 
-                    placeholder="Enter city name" 
-                    class="flex-grow p-2 border rounded-l-lg"
-                >
-                <button 
-                    id="searchBtn" 
-                    class="bg-blue-500 text-white px-4 py-2 rounded-r-lg hover:bg-blue-600"
-                >
+                <input type="text" id="citySearch" placeholder="Enter city name"
+                    class="flex-grow p-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button id="searchBtn"
+                    class="bg-blue-500 text-white px-4 py-2 rounded-r-lg hover:bg-blue-600 transition-colors">
                     Search
                 </button>
-                <button 
-                    id="locationBtn" 
-                    class="ml-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
-                >
+                <button id="locationBtn"
+                    class="ml-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
                     <i class="fas fa-location-arrow"></i>
                 </button>
             </div>
 
-            <!-- recently searched dropdown -->
-
-
-
+            <!-- recently searched  dropdown -->
             <div id="recentSearches" class="mb-4 hidden">
-                <select 
-                    id="recentSearchDropdown" 
-                    class="w-full p-2 border rounded-lg"
-                >
-
-
+                <select id="recentSearchDropdown"
+                    class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </select>
             </div>
 
-            <!-- current weather section -->
-
-
+            <!-- current  weather  -->
             <div id="currentWeather" class="mb-6 text-center">
-                <h2 id="cityName" class="text-2xl font-bold"></h2>
-                <p id="currentDate" class="text-gray-600"></p>
+                <h2 id="cityName" class="text-2xl font-bold mb-2"></h2>
+                <p id="currentDate" class="text-gray-600 mb-4"></p>
                 <div class="flex justify-center items-center">
                     <img id="weatherIcon" class="w-24 h-24" src="weatherIcon.png" alt="Weather Icon">
                     <div class="ml-4">
@@ -66,37 +46,31 @@
                 </div>
                 <div class="flex justify-around mt-4">
                     <div>
-                        <i class="fas fa-tint"></i>
+                        <i class="fas fa-tint text-blue-500"></i>
                         <span id="humidity"></span>
                     </div>
                     <div>
-                        <i class="fas fa-wind"></i>
+                        <i class="fas fa-wind text-gray-500"></i>
                         <span id="windSpeed"></span>
                     </div>
                 </div>
             </div>
 
-           
-            <div id="extendedForecast" class="grid grid-cols-5 gap-2">
-               <!-- forecast cards -->
-
+            <!-- extended forecast  -->
+            <div id="extendedForecast" class="grid grid-cols-1 sm:grid-cols-5 gap-2">
+                <!-- forecast cards -->
             </div>
 
-            <!-- error message -->
-            <div 
-                id="errorMessage" 
-                class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" 
-                role="alert"
-            >
+            <!-- error message  -->
+            <div id="errorMessage"
+                class="hidden mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+                role="alert">
                 <span id="errorText" class="block sm:inline"></span>
             </div>
         </div>
     </div>
 
-    <script type="module" src="src/js/app.js"></script>
+    <script src="weather-app.js"></script>
 </body>
+
 </html>
-
-
-
-
